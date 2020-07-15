@@ -9,7 +9,7 @@ const NotesList = () => {
     <div>
       {notes.length ? (
         <Row>
-          {notes.map((note, id) => (
+          {notes.map((note) => (
             <NoteItem key={note.id} {...note} />
           ))}
         </Row>
