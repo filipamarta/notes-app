@@ -3,6 +3,13 @@
   border: 0;
   margin-bottom: 20px;
 
+  .card-title.h5 {
+    font-size: 1.2rem;
+  }
+  .card-text {
+    font-size: 0.9rem;
+  }
+
   .btn.btn-primary {
     font-size: 0.8rem;
     color: black;
@@ -10,15 +17,19 @@
     border: 0;
     border-radius: 30px;
     transition: background-color 0.3s ease-in-out;
+
     &.delete-btn {
       background-color: #dadada;
+
       &:hover {
         background-color: #c9c9c9;
         transition: background-color 0.3s ease-in-out;
-      } 
+      }
     }
+
     &.edit-btn {
       background-color: #febfa9;
+
       &:hover {
         background-color: #fca180;
         transition: background-color 0.3s ease-in-out;

@@ -3,9 +3,13 @@ body {
   background: rgb(254,135,119);
   background: linear-gradient(163deg, rgba(254,135,119,0.804359243697479) 0%, rgba(254,224,182,0.7987570028011204) 100%);
   background-repeat: no-repeat;
-  padding-top: 60px;
+  padding-top: 50px;
   padding-bottom: 30px;
   text-align: center;
+
+  h1 {
+    margin-bottom: 15px;
+  }
 }
 
 h1,
@@ -13,7 +17,7 @@ h2,
 h3,
 label,
 button.btn,
-.card-title.h5 {
+.card-title.h5{
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
 }

@@ -1,4 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 export const NotesContext = createContext();
 
@@ -9,18 +10,19 @@ const NotesContextProvider = (props) => {
     localStorage.setItem("notes", JSON.stringify(notes))
   }, [notes]);
 
-  const addNote = (text) => {
-    setNotes([...notes, { id: notes.length + 1, text: text }]);
+  const addNote = (title, text) => {
+    //console.log(`ADD note`);
+    setNotes([...notes, { id: uuidv4(), title: title, text: text }]);
   };
 
   const deleteNote = (id) => {
-    console.log(`DELETE note with id: ${id}`);
+    //console.log(`DELETE note with id: ${id}`);
     setNotes(notes.filter((note) => note.id !== id));
   };
 
-  const editNote = (text, id) => {
-    console.log(`EDIT note with id: ${id}`);
-    let updatedNotes = notes.map((note) => (note.id === id ? { ...note, text } : note))
+  const editNote = (title, text, id) => {
+    //console.log(`EDIT note with id: ${id}`);
+    let updatedNotes = notes.map((note) => (note.id === id ? { ...note, title, text } : note))
     setNotes(updatedNotes);
   };
 

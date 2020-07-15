@@ -5,15 +5,17 @@ import "./AddNoteForm.scss";
 
 const AddNoteForm = () => {
   const { addNote } = useContext(NotesContext);
+  const [title, setTitle] = useState("");
   const [text, setText] = useState("");
   const [isError, setIsError] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("SUBMIT note");
-    if (text.length > 0) {
-      addNote(text);
+    if (title.length > 0 && text.length > 0) {
+      addNote(title, text);
       setIsError(false);
+      setTitle("");
       setText("");
     } else {
       setIsError(true);
@@ -22,13 +24,25 @@ const AddNoteForm = () => {
 
   return (
     <Form onSubmit={handleSubmit} className="primary-form">
-      <Form.Group controlId="addNewNoteForm">
-        <Form.Label>~ To keep in mind ~</Form.Label>
+      <h2>~ To keep in mind ~</h2>
+      <Form.Group controlId="addTitleNoteForm">
+        <Form.Control
+          as="textarea"
+          rows="1"
+          placeholder="give your note a title"
+          name="title"
+          value={title}
+          onChange={(event) => {
+            setTitle(event.target.value);
+          }}
+        />
+      </Form.Group>
+      <Form.Group controlId="addTextNoteForm">
         <Form.Control
           as="textarea"
           rows="3"
           placeholder="write your note here"
-          name="textarea"
+          name="text"
           value={text}
           onChange={(event) => {
             setText(event.target.value);
@@ -37,7 +51,7 @@ const AddNoteForm = () => {
         />
       </Form.Group>
       <p className={isError ? "error-msg fadeIn" : "error-msg fadeOut"}>
-        Don't forget to write something to keep in mind{" "}
+       Don't forget to fill in both fields{" "}
         <span role="img" aria-label="hand">
           ☝️
         </span>

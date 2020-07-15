@@ -10,17 +10,15 @@
         box-shadow: 10px 10px 39px -25px rgba(0, 11, 160, 0.911);
         transform: scale(1.01);
     }
-    label {
+    h2 {
         font-size: 1.3rem;
+        margin-bottom: 20px;
     }
     textarea {
         border: 1px dashed rgb(82, 154, 218);
         &::placeholder {
             font-weight: 100;
         }
-    }
-    .form-group {
-        margin: 0;
     }
     .btn.btn-primary {
         padding: 10px 20px;
@@ -34,7 +32,7 @@
         }
     }
     .error-msg {
-        margin: 12px 0;
+        margin: -6px 0 12px 0;
         font-size: 0.7rem;
         &.fadeOut{
             opacity: 0;
