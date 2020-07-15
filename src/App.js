@@ -37,9 +37,8 @@ const App = () => (
                 Filipa Marta
               </a>{" "}
               with simple text notes that can be viewed, created, modified, and
-              deleted. Should be persisted in the browser's Local Storage.
-              <br />
-              Tech used: ReactJS, SASS, UUID and Bootstrap. For more information
+              deleted, and are persisted in the browser's Local Storage.
+              The tech used was ReactJS (with Context and Hooks), Javascript ES6, SASS, UUID and Bootstrap. It was build with Netlify. For more information
               check directly the GitHub page of this project{" "}
               <a
                 href="https://github.com/filipamarta/interview-opplane-challenge"

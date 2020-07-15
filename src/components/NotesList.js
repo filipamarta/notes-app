@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
 import NoteItem from "./NoteItem";
 import { NotesContext } from "../contexts/NotesContext";
-import Row from "react-bootstrap/Row";
+import { CardColumns } from "react-bootstrap";
 
 const NotesList = () => {
   const { notes } = useContext(NotesContext);
   return (
     <div>
       {notes.length ? (
-        <Row>
+        <CardColumns>
           {notes.map((note) => (
             <NoteItem key={note.id} {...note} />
           ))}
-        </Row>
+        </CardColumns>
       ) : (
         <div className="empty-list">
           <p>there are no notes for now...</p>
