@@ -1,9 +1,9 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 export const NotesContext = createContext();
 
 const NotesContextProvider = (props) => {
-  const [notes, setNotes] = useState([
+  const [notes, setNotes] = useState(JSON.parse(localStorage.getItem("notes")) || [
     {
       id: 1,
       text:
@@ -15,6 +15,10 @@ const NotesContextProvider = (props) => {
         "What is React.createClass? React.createClass allows us to generate component classes. But with ES6, React allows us to implement component classes that use ES6 JavaScript classes.",
     },
   ]);
+
+  useEffect( () => {
+    localStorage.setItem("notes", JSON.stringify(notes))
+  }, [notes]);
 
   const addNote = (text) => {
     console.log("ADD note", text);
@@ -28,7 +32,9 @@ const NotesContextProvider = (props) => {
 
   const editNote = (updatedText, id) => {
     console.log(`EDIT note with id: ${id}`);
-    setNotes(notes.map((note) => (note.id === id ? note.text = updatedText : note)));
+    setNotes(
+      notes.map((note) => (note.id === id ? (note.text = updatedText) : note))
+    );
   };
 
   return (
