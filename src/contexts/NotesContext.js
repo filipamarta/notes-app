@@ -16,7 +16,6 @@ const NotesContextProvider = (props) => {
     },
   ]);
 
-
   const addNote = (text) => {
     console.log("ADD note", text);
     setNotes([...notes, { id: notes.length + 1, text: text }]);
@@ -27,9 +26,9 @@ const NotesContextProvider = (props) => {
     setNotes(notes.filter((note) => note.id !== id));
   };
 
-  const editNote = (text, id) => {
+  const editNote = (updatedText, id) => {
     console.log(`EDIT note with id: ${id}`);
-    notes.map( (note) => note.id === id ? setNotes([...notes, { id: id, text: text }]) : console.log("error", text));
+    setNotes(notes.map((note) => (note.id === id ? note.text = updatedText : note)));
   };
 
   return (

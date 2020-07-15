@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { NotesContext } from "../contexts/NotesContext";
-import { Col, Card, Button } from "react-bootstrap";
+import { Col, Card, Button, Form } from "react-bootstrap";
 import "./NoteItem.scss";
 
 const NoteItem = (props) => {
@@ -22,18 +22,22 @@ const NoteItem = (props) => {
         <Card.Body>
           <Card.Title>Note #{id}</Card.Title>
           {isEdit ? (
-            <form onSubmit={handleSubmit}>
-              <textarea
-                name="textarea"
-                value={updateText}
-                onChange={(event) => {
-                  setUpdateText(event.target.value);
-                }}
-              />
-              <button type="submit" value="update note">
+            <Form onSubmit={handleSubmit} className="edit-form">
+              <Form.Group controlId="editNoteForm">
+                <Form.Control
+                  as="textarea"
+                  rows="8"
+                  name="textarea"
+                  value={updateText}
+                  onChange={(event) => {
+                    setUpdateText(event.target.value);
+                  }}
+                />
+              </Form.Group>
+              <Button type="submit" value="update note" className="edit-btn">
                 Update note
-              </button>
-            </form>
+              </Button>
+            </Form>
           ) : (
             <span>
               <Card.Text>{text}</Card.Text>
