@@ -1,3 +1,5 @@
+@import '../styles/_colors.scss';
+
 .card {
   border-radius: 0.5rem;
   border: 0;
@@ -6,6 +8,7 @@
   .card-title.h5 {
     font-size: 1.2rem;
   }
+
   .card-text {
     font-size: 0.9rem;
   }
@@ -19,19 +22,19 @@
     transition: background-color 0.3s ease-in-out;
 
     &.delete-btn {
-      background-color: #dadada;
+      background-color: $grey;
 
       &:hover {
-        background-color: #c9c9c9;
+        background-color: $grey-hover;
         transition: background-color 0.3s ease-in-out;
       }
     }
 
     &.edit-btn {
-      background-color: #febfa9;
+      background-color: $orange;
 
       &:hover {
-        background-color: #fca180;
+        background-color: $orange-hover;
         transition: background-color 0.3s ease-in-out;
       }
     }

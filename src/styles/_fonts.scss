@@ -1,0 +1,33 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;700&family=Roboto:wght@100;400&display=swap');
+
+$font-sans-serif: 'Roboto',
+sans-serif;
+$font-serif: 'Roboto Slab',
+serif;
+
+h1,
+h2,
+h3,
+label,
+button.btn,
+.card-title.h5 {
+    font-family: $font-sans-serif;
+    font-weight: 100;
+}
+
+p,
+textarea {
+    font-family: $font-serif;
+    font-weight: 400;
+}
+
+a {
+    color: $yellow;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: $yellow-hover;
+        transition: color 0.3s ease-in-out;
+    }
+}
