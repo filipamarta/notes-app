@@ -4,3 +4,4 @@ An app for *Opplane* code challenge developed by **Filipa Marta** with simple te
 The tech used was ReactJS (with Context and Hooks), Javascript ES6, SASS, UUID and Bootstrap. 
 It was build with Netlify and you can see it live here: https://notes-app-challenge.netlify.app/. 
 
+![Image](https://github.com/filipamarta/interview-opplane-challenge/blob/master/src/images/capa_github_notes-app.png)
