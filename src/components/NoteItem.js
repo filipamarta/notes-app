@@ -26,7 +26,7 @@ const NoteItem = (props) => {
               <Form.Group controlId="editNoteForm">
                 <Form.Control
                   as="textarea"
-                  rows="8"
+                  rows="6"
                   name="textarea"
                   value={updateText}
                   onChange={(event) => {

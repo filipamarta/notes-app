@@ -7,11 +7,17 @@ const NotesList = () => {
   const { notes } = useContext(NotesContext);
   return (
     <div>
-      <Row>
-        {notes.map((note, id) => (
-          <NoteItem key={note.id} {...note} />
-        ))}
-      </Row>
+      {notes.length ? (
+        <Row>
+          {notes.map((note, id) => (
+            <NoteItem key={note.id} {...note} />
+          ))}
+        </Row>
+      ) : (
+        <div className="empty-list">
+          <p>there are no notes for now...</p>
+        </div>
+      )}
     </div>
   );
 };
