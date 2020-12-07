@@ -7,3 +7,4 @@ It was build with Netlify and you can see it live here: https://notes-app-challe
 This app was built as a tech challenge for *Opplane*.
 
 ![Image](https://github.com/filipamarta/interview-opplane-challenge/blob/master/src/images/capa_github_notes-app.png)
+
