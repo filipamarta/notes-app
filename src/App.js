@@ -19,36 +19,6 @@ const App = () => (
         >
           <header>
             <h1>Welcome to your Notes App!</h1>
-            <p>
-              An app for{" "}
-              <a
-                href="https://www.opplane.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Opplane
-              </a>{" "}
-              code challenge developed <span role="img" aria-label="love">🥰</span> by{" "}
-              <a
-                href="https://github.com/filipamarta"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Filipa Marta
-              </a>{" "}
-              with simple text notes that can be viewed, created, modified, and
-              deleted, and are persisted in the browser's Local Storage.
-              The tech used was ReactJS (with Context and Hooks), Javascript ES6, SASS, UUID and Bootstrap. It was build with Netlify. For more information
-              check directly the GitHub page of this project{" "}
-              <a
-                href="https://github.com/filipamarta/interview-opplane-challenge"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                here
-              </a>
-              .
-            </p>
           </header>
         </Col>
       </Row>
